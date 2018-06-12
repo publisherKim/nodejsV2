@@ -1,0 +1,10 @@
+CORE(Chatered Openhash and Robotics Educator) Exam Level 1
+
+Requirement: Sep, 2018
+
+Supposing there are 10 cars autonomouly driving in Korea, and each car has a GPS
+1. You should write an app which collects the current locations(GPS, address).
+2. Add a car to car-list.
+3. Get the list of cars.
+4. Remove a car from list.
+5. Read a data on a specific car.
