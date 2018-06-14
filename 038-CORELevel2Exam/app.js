@@ -6,7 +6,7 @@ const util = require('./util/util');
 // use code
 const accountList = crud.fetchList('./json-exercies/data.json');
 
-exchange.currentExchange('USD', 'CNY', 100)
+exchange.currentExchange('USD', 'CNY', 10)
     .then((exchangedAmount) => {
         const AliceData = crud.getUser(util.name('Alice'), accountList);
         const WangData = crud.getUser(util.name('Wang'), accountList);
