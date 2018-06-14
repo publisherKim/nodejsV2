@@ -8,16 +8,12 @@ const accountList = crud.fetchList('./json-exercies/data.json');
 
 exchange.currentExchange('USD', 'CNY', 10)
     .then((exchangedAmount) => {
-        const AliceData = crud.getUser(util.name('Alice'), accountList);
-        const WangData = crud.getUser(util.name('Wang'), accountList);
-        let account = crud.getAll('./json-exercies/data.json');
-        account = [];
-
-        AliceData.balance.amount += exchangedAmount;
-        WangData.balance.amount -= exchangedAmount;
-
-        account.push(AliceData);
-        account.push(WangData);
-
+        const account = crud.getAll('./json-exercies/data.json');
+        // account = [];
+        const idOfBuyer = account.findIndex(item => item.name === util.name('Alice'));
+        const idOfSeller = account.findIndex(item => item.name === util.name('Wang'));
+        
+        account[idOfBuyer].balance.amount += exchangedAmount;
+        account[idOfSeller].balance.amount -= exchangedAmount;
         crud.updateList('./json-exercies/data.json', account);
     });
