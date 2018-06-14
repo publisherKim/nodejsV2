@@ -6,7 +6,7 @@ const util = require('./util/util');
 // use code
 const accountList = crud.fetchList();
 
-exchange.currentExchange('USD', 'CNY', 10)
+exchange.currentExchange('USD', 'CNY', 100)
     .then((exchangedAmount) => {
         // crud.updateList();
         // 절차 급땅기네, 절차를 못벗어나네 -_-;;;
