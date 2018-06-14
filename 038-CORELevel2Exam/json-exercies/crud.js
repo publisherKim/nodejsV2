@@ -1,8 +1,8 @@
 const fs = require('fs');
 
-const fetchList = () => {
+const fetchList = (url) => {
     try {
-        const data = JSON.parse(fs.readFileSync('./json-exercies/data.json', 'utf-8')); // 실행시점에서의 path 상대경로...
+        const data = JSON.parse(fs.readFileSync(url, 'utf-8')); // 실행시점에서의 path 상대경로...
         return data;
     } catch(e) {
         return [];
@@ -13,12 +13,12 @@ const getUser = (name, targetList) => {
     return targetList.find(item => item.name === name);
 };
 
-const getAll = () => {
-    return fetchList();
+const getAll = (url) => {
+    return fetchList(url);
 };
 
-const updateList = (parsedJson) => {
-    fs.writeFileSync('./json-exercies/data.json', JSON.stringify(parsedJson));
+const updateList = (url, parsedJson) => {
+    fs.writeFileSync(url, JSON.stringify(parsedJson));
 };
 
 module.exports = {

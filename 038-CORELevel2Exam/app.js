@@ -4,15 +4,14 @@ const exchange = require('./program/exchange');
 const util = require('./util/util');
 
 // use code
-const accountList = crud.fetchList();
+const accountList = crud.fetchList('./json-exercies/data.json');
 
 exchange.currentExchange('USD', 'CNY', 100)
     .then((exchangedAmount) => {
-        // crud.updateList();
-        // 절차 급땅기네, 절차를 못벗어나네 -_-;;;
         const AliceData = crud.getUser(util.name('Alice'), accountList);
         const WangData = crud.getUser(util.name('Wang'), accountList);
-        const account = [];
+        let account = crud.getAll('./json-exercies/data.json');
+        account = [];
 
         AliceData.balance.amount += exchangedAmount;
         WangData.balance.amount -= exchangedAmount;
@@ -20,5 +19,5 @@ exchange.currentExchange('USD', 'CNY', 100)
         account.push(AliceData);
         account.push(WangData);
 
-        crud.updateList(account);
+        crud.updateList('./json-exercies/data.json', account);
     });
