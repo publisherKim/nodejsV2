@@ -9,6 +9,31 @@ const fetchList = () => {
     }
 };
 
+const getUser = (name, targetList) => {
+    return targetList.find(item => item.name === name);
+};
+
+const getAll = () => {
+    return fetchList();
+};
+
+const purchasedData = () => {
+
+};
+
+const sailedData = () => {
+
+};
+
+const updateList = (parsedJson) => {
+    // fs.writeFileSync('./data/data', JSON.stringify(parsedJson));
+};
+
 module.exports = {
-    fetchList
+    fetchList,
+    getUser,
+    getAll,
+    purchasedData,
+    sailedData,
+    updateList
 }
