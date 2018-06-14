@@ -2,7 +2,7 @@ const isArray = (target) => {
     Array.isArray(target);
 };
 
-const getUserList = (name, targetList) => {
+const getUser = (name, targetList) => {
     return targetList.find(item => item.name === name);
 };
 
