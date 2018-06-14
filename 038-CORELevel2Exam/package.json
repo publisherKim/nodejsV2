@@ -1,14 +1,11 @@
 {
-  "name": "035-currencyexchange",
+  "name": "038-currencyexchange",
   "version": "1.0.0",
   "description": "",
-  "main": "concept.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.18.0"
-  }
+  "license": "ISC"
 }
