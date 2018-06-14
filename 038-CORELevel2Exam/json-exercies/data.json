@@ -1,16 +1,1 @@
-[
-    {
-        "name": "Alice",
-        "balance": {
-            "issuedNation": "USA",
-            "amount": 1000
-        }
-    },
-    {
-        "name": "Wang",
-        "balance": {
-            "issuedNation": "China",
-            "amount": 3000
-        }
-    }
-]
+[{"name":"Alice","balance":{"issuedNation":"USA","amount":1063}},{"name":"Wang","balance":{"issuedNation":"China","amount":2937}}]

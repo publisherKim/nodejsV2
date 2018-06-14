@@ -17,23 +17,13 @@ const getAll = () => {
     return fetchList();
 };
 
-const purchasedData = () => {
-
-};
-
-const sailedData = () => {
-
-};
-
 const updateList = (parsedJson) => {
-    // fs.writeFileSync('./data/data', JSON.stringify(parsedJson));
+    fs.writeFileSync('./json-exercies/data.json', JSON.stringify(parsedJson));
 };
 
 module.exports = {
     fetchList,
     getUser,
     getAll,
-    purchasedData,
-    sailedData,
     updateList
-}
+};
